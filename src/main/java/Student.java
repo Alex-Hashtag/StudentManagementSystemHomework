@@ -1,16 +1,17 @@
 import java.util.Objects;
+import java.util.UUID;
 
 
 public class Student
 {
-    private int studentID;
+    private UUID studentID;
     private String name;
 
-    private int age;
+    private byte age;
 
     private double grade;
 
-    public Student(int studentID, String name, int age, double grade)
+    public Student(UUID studentID, String name, byte age, double grade)
     {
         this.studentID = studentID;
         this.name = name;
@@ -18,12 +19,12 @@ public class Student
         this.grade = grade;
     }
 
-    public int getStudentID()
+    public UUID getStudentID()
     {
         return studentID;
     }
 
-    public void setStudentID(int studentID)
+    public void setStudentID(UUID studentID)
     {
         this.studentID = studentID;
     }
@@ -43,7 +44,7 @@ public class Student
         return age;
     }
 
-    public void setAge(int age)
+    public void setAge(byte age)
     {
         this.age = age;
     }
@@ -68,14 +69,10 @@ public class Student
     }
 
     @Override
-    public int hashCode()
-    {
-        return Objects.hash(studentID, name, age, grade);
-    }
-
-    @Override
     public String toString()
     {
         return STR."Student{studentID=\{studentID}, name='\{name}\{'\''}, age=\{age}, grade=\{grade}\{'}'}";
     }
+
+
 }
